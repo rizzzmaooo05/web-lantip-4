@@ -1,0 +1,30 @@
+---
+
+---
+
+<div
+  class="flex justify-center items-center gap-1 cursor-pointer"
+  id="hamburger-menu"
+>
+  <div class="flex flex-col gap-[3px]" id="hamburger">
+    <span class="w-6 rounded-sm h-1 bg-white ease-in-out duration-1000" ></span>
+    <span class="w-6 rounded-sm h-1 bg-white ease-in-out duration-1000"></span>
+    <span class="w-6 rounded-sm h-1 bg-white ease-in-out duration-1000"></span>
+  </div>
+  <p class="text-2xl font-bold">MENU</p>
+</div>
+
+<style>
+  .toggle #hamburger span:nth-child(1) {
+    rotate: 45deg;
+    translate: 0 7px;
+  }
+  .toggle #hamburger span:nth-child(2) {
+    translate  : -20px;
+    visibility: hidden;
+  }
+  .toggle #hamburger span:nth-child(3) {
+    rotate: -45deg;
+    translate: 0 -7px;
+  }
+</style>

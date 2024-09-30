@@ -1,0 +1,14 @@
+---
+const { menuLink, menuName } = Astro.props;
+---
+
+<a
+  class="flex items-center gap-2 px-8 py-1 hover:bg-white hover:text-[#051923] hover:font-bold text-sm group"
+  href={menuLink}
+  >
+  <div class="flex flex-col">
+    <span class="w-2 h-1 bg-white rotate-45 group-hover:bg-primary"></span>
+    <span class="w-2 h-1 bg-white -rotate-45 group-hover:bg-primary"></span>
+  </div>
+  <p class="">{menuName}</p>
+</a>

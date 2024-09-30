@@ -1,0 +1,40 @@
+---
+const { img, nama, jabatan, prodi, fakultas, instagram } = Astro.props;
+---
+
+<div
+  class="border-[3px] border-primary group flex flex-col justify-center items-center relative overflow-hidden"
+>
+  <img
+    src={img}
+    class="w-full group-hover:brightness-[30%] aspect-[3/4] group-hover:scale-110 object-cover md:object-fill"
+    alt="/"
+  />
+  <div
+    class="absolute hidden text-white p-1 group-hover:block text-md md:text-sm"
+  >
+    <div class="flex flex-col justify-center items-center mb-2">
+      <p class="font-bold">Nama:</p>
+      <p class="text-center">{nama}</p>
+    </div>
+    <div class="flex flex-col justify-center items-center mb-2">
+      <p class="font-bold">Jabatan:</p>
+      <p class="text-center">{jabatan}</p>
+    </div>
+    <div class="flex flex-col justify-center items-center mb-2">
+      <p class="font-bold">Program Studi:</p>
+      <p class="text-center">{prodi}</p>
+    </div>
+    <div class="flex flex-col justify-center items-center mb-2">
+      <p class="font-bold">Fakultas:</p>
+      <p class="text-center">{fakultas}</p>
+    </div>
+    <div class="flex flex-col justify-center items-center mb-2">
+      <p class="font-bold">Instagram:</p>
+      <a
+        href={`http://instagram.com/${instagram}`}
+        class="hover:underline hover:font-semibold text-center">{`@${instagram}`}</a
+      >
+    </div>
+  </div>
+</div>

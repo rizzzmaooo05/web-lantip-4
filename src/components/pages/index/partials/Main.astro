@@ -1,0 +1,36 @@
+---
+
+---
+
+<main class="w-full flex justify-center items-center font-bold text-primary relative" id="konten">
+  <img alt="bg" class="absolute w-full h-full object-fill brightness-[30%]" id="bg" src="/images/bg-mobile.jpg">
+	<p class="absolute text-white p-1 mx-10 text-center md:text-2xl md:p-2 md:mx-32" id="welcome">Selamat datang di Website UNNES LANTIP 4 dengan mitra SMAN 9 Semarang</p>
+</main>
+
+<script>
+	const clientHeight = window.innerHeight
+	const titleHeight = document.getElementsByClassName('title')[0].clientHeight
+	const konten = document.getElementById('konten')
+	konten.style.minHeight = (clientHeight - titleHeight).toString() + 'px'
+	konten.style.marginTop = titleHeight.toString() + 'px'
+
+	const clientWidth = window.innerWidth
+	const bg = document.getElementById('bg')
+	
+	if(clientWidth < 720 ) {
+		bg.setAttribute('src', '/images/bg-mobile.jpg')
+	} else {
+		bg.setAttribute('src', '/images/bg-desktop.jpg')
+	}
+</script>
+
+<script>
+	setTimeout(function() {
+		const bg = document.getElementById('bg')
+		const welcome = document.getElementById('welcome')
+		
+		welcome.classList.add('hidden')
+		bg.classList.remove('brightness-[30%]')
+		bg.classList.add('brightness-50')
+	}, 5000)
+</script>

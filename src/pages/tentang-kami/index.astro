@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/header/Header.astro";
+import AboutUs from "../../components/pages/tentang-kami/AboutUs.astro"
+import Footer from "../../components/footer/Footer.astro";
+---
+
+<Layout title="Tentang Kami - UNNES LANTIP 4 SMAN 9 SEMARANG">
+  <Header/>
+  <AboutUs/>
+  <Footer/>
+</Layout>
+
+<script>
+  const clientHeight = window.innerHeight
+	const titleHeight = document.getElementsByClassName('title')[0].clientHeight
+	const konten = document.getElementById('konten')
+	konten.style.minHeight = (clientHeight - titleHeight).toString() + 'px'
+	konten.style.marginTop = titleHeight.toString() + 'px'
+</script>
+

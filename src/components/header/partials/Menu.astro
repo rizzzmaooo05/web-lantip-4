@@ -1,0 +1,33 @@
+---
+const { menuLink, menuName, haveSubMenu } = Astro.props;
+---
+
+{
+  haveSubMenu && (
+    <div
+      class="flex justify-between items-center text-xs hover:bg-white hover:text-[#051923] hover:font-bold p-2 cursor-pointer menu group"
+    >
+      <p class="text-center">
+
+      {menuName}
+      </p>
+      <div class="flex icon-menu ease-in-out duration-1000">
+        <span class="w-2 h-1 bg-white rotate-45 translate-x-1 group-hover:bg-primary "></span>
+        <span class="w-2 h-1 bg-white -rotate-45 group-hover:bg-primary"></span>
+      </div>
+    </div>
+      <slot/>
+  )
+}
+
+{
+  !haveSubMenu && (
+    <a
+      href={menuLink}
+      class="hover:bg-white hover:text-[#051923] hover:font-bold p-2 text-xs"
+    >
+      {menuName}
+    </a>
+  )
+}
+

@@ -1,0 +1,62 @@
+---
+import HeaderWrapper from "./partials/wrapper/HeaderWrapper.astro";
+
+import Title from "./partials/Title.astro";
+import TitleWrapper from "./partials/wrapper/TitleWrapper.astro";
+
+import Hamburger from "./partials/Hamburger.astro";
+
+import Menu from "./partials/Menu.astro";
+import MenuWrapper from "./partials/wrapper/MenuWrapper.astro";
+
+import SubMenu from "./partials/SubMenu.astro";
+import SubMenuWrapper from "./partials/wrapper/SubMenuWrapper.astro";
+---
+
+<HeaderWrapper>
+  <TitleWrapper>
+    <Title />
+    <Hamburger />
+  </TitleWrapper>
+
+  <MenuWrapper>
+    <Menu menuLink="/" menuName="Beranda" haveSubMenu={false} />
+    <Menu menuLink="/" menuName="UNNES LANTIP 4" haveSubMenu={true}>
+      <SubMenuWrapper>
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+      </SubMenuWrapper>
+    </Menu>
+    <Menu menuLink="/" menuName="Tentang Sekolah" haveSubMenu={true}>
+      <SubMenuWrapper>
+        <SubMenu menuName="Profil Sekolah" menuLink="/tentang-sekolah/profil-sekolah" />
+        <SubMenu menuName="Keadaan Fisik Sekolah" menuLink="/tentang-sekolah/keadaan-fisik-sekolah" />
+        <SubMenu menuName="Sarana dan Prasarana Sekolah" menuLink="/tentang-sekolah/sarana-prasarana" />
+        <SubMenu menuName="Kurikulum Sekolah" menuLink="/tentang-sekolah/kurikulum" />
+      </SubMenuWrapper>
+    </Menu>
+    <Menu
+      menuLink="/tentang-kami"
+      menuName="Tentang Kami"
+      haveSubMenu={false}
+    />
+    <Menu menuLink="/" menuName="Produk Hasil" haveSubMenu={true}>
+      <SubMenuWrapper>
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+      </SubMenuWrapper>
+    </Menu>
+    <Menu menuLink="/" menuName="Dokumentasi" haveSubMenu={true}>
+      <SubMenuWrapper>
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+        <SubMenu menuName="Profilia" menuLink="/" />
+      </SubMenuWrapper>
+    </Menu>
+  </MenuWrapper>
+</HeaderWrapper>
