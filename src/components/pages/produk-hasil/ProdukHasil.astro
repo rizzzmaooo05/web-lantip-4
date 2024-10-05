@@ -1,0 +1,56 @@
+---
+
+---
+
+<main
+  class="w-full flex flex-col justify-center items-center p-4 text-primary"
+  id="konten"
+>
+  <h3 class="self-start w-full text-2xl font-bold mb-4 text-justify">
+    Produk Hasil
+  </h3>
+  <p class="self-start w-full text-justify mb-4">
+    Setelah menjalani program UNNES LANTIP 4 di SMAN 9 Semarang selama beberapa
+    bulan, ada beberapa produk yang kami hasilkan. Produk hasil tersebut di
+    antaranya adalah laporan hasil observasi dan orientasi, modul ajar, website,
+    serta laporan akhir.
+  </p>
+  <div class="self-start w-full mb-4 flex flex-col">
+    <h3 class="w-full font-bold">Laporan Hasil Observasi dan Orientasi</h3>
+    <p class="w-full indent-10 text-justify">
+      Pada satu minggu awal menjalani program UNNES LANTIP 4 di SMAN 9 Semarang
+      ini, kami melakukan observasi terkait sekolah. Observasi kami berkaitan
+      dengan profil sekolah, keadaan fisik sekolah, kurikulum sekolah, struktur
+      organisasi sekolah, dan lain-lain. Setelah melakukan observasi, disusunlah
+      laporan hasil observasi. Laporan hasil observasi tersebut dapat diakses di
+      bawah ini.
+    </p>
+    <embed
+      src="/public/files/bukpan-lantip.pdf"
+      type="application/pdf"
+      class="w-full h-[150vh]"
+    />
+  </div>
+  <div class="self-start w-full mb-4 flex flex-col">
+    <h3 class="w-full font-bold">Modul Ajar</h3>
+    <p class="w-full indent-10 text-justify">Belum pada dikumpulin :v</p>
+  </div>
+  <div class="self-start w-full mb-4 flex flex-col">
+    <h3 class="w-full font-bold">Website</h3>
+    <p class="w-full indent-10 text-justify">
+      Setelah mengikuti program, kami diharuskan untuk membuat suatu luaran dari program. Terdapat beberapa pilihan untuk luaran di antaranya yaitu buku ajar, modul, prototipe, profil sekolah, video pembelajaran, website, LMS, model evaluasi pembelajaran, dan media pembelajaran. Di sini, kami memilih untuk membuat website. Website yang kami buat adalah website yang sedang Anda kunjungi sekarang ini.
+    </p>
+  </div>
+  <div class="self-start w-full mb-4 flex flex-col">
+    <h3 class="w-full font-bold">Laporan Akhir</h3>
+    <p class="w-full indent-10 text-justify">Belum pada dikumpulin :v</p>
+  </div>
+</main>
+
+<script>
+  const clientHeight = window.innerHeight;
+  const titleHeight = document.getElementsByClassName("title")[0].clientHeight;
+  const konten = document.getElementById("konten");
+  konten.style.minHeight = (clientHeight - titleHeight).toString() + "px";
+  konten.style.marginTop = titleHeight.toString() + "px";
+</script>

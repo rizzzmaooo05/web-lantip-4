@@ -21,19 +21,13 @@ import SubMenuWrapper from "./partials/wrapper/SubMenuWrapper.astro";
 
   <MenuWrapper>
     <Menu menuLink="/" menuName="Beranda" haveSubMenu={false} />
-    <Menu menuLink="/" menuName="UNNES LANTIP 4" haveSubMenu={true}>
-      <SubMenuWrapper>
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-      </SubMenuWrapper>
-    </Menu>
+    <Menu menuLink="/tentang-unnes-lantip" menuName="Tentang UNNES LANTIP" haveSubMenu={false} />
     <Menu menuLink="/" menuName="Tentang Sekolah" haveSubMenu={true}>
       <SubMenuWrapper>
         <SubMenu menuName="Profil Sekolah" menuLink="/tentang-sekolah/profil-sekolah" />
         <SubMenu menuName="Keadaan Fisik Sekolah" menuLink="/tentang-sekolah/keadaan-fisik-sekolah" />
         <SubMenu menuName="Sarana dan Prasarana Sekolah" menuLink="/tentang-sekolah/sarana-prasarana" />
+        <SubMenu menuName="Sumber Daya Manusia Sekolah" menuLink="/tentang-sekolah/sumber-daya-manusia" />
         <SubMenu menuName="Kurikulum Sekolah" menuLink="/tentang-sekolah/kurikulum" />
       </SubMenuWrapper>
     </Menu>
@@ -42,21 +36,6 @@ import SubMenuWrapper from "./partials/wrapper/SubMenuWrapper.astro";
       menuName="Tentang Kami"
       haveSubMenu={false}
     />
-    <Menu menuLink="/" menuName="Produk Hasil" haveSubMenu={true}>
-      <SubMenuWrapper>
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-      </SubMenuWrapper>
-    </Menu>
-    <Menu menuLink="/" menuName="Dokumentasi" haveSubMenu={true}>
-      <SubMenuWrapper>
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-        <SubMenu menuName="Profilia" menuLink="/" />
-      </SubMenuWrapper>
-    </Menu>
+    <Menu menuLink="/produk-hasil" menuName="Produk Hasil" haveSubMenu={false} />
   </MenuWrapper>
 </HeaderWrapper>
